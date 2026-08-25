@@ -1661,7 +1661,6 @@
           currentDecision = draft.decision || null;
           if (currentDecision) {
             selectDecisionButton(currentDecision);
-            revealAnswer();
           } else {
             clearDecisionButtons();
           }
@@ -1767,7 +1766,6 @@
     function setDecision(type) {
       currentDecision = type;
       selectDecisionButton(type);
-      revealAnswer();
       const names = { approved: 'อนุมัติ (Approved)', need_edit: 'ต้องแก้ไข (Need Edit)', rejected: 'ไม่ผ่าน (Rejected)', discuss: 'หารือ (Discuss)' };
       showToast(`เลือก: ${names[type]}`);
       // Auto-save draft immediately
